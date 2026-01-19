@@ -1,11 +1,9 @@
-paths:
-  static: ''
-  uploads: uploads
 timezone: Asia/Qatar
-markdown:
-  engine: commonmark
-  options: {}
-collections_config:
-  pages:
-    path: ''
-    icon: wysiwyg
+
+paths:
+  uploads: "uploads"
+
+# This is the missing piece that turns on the Editor:
+editor:
+  visual:
+    editable_class: "editable"
