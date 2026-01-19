@@ -3,182 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Studios | Digital Design</title>
+
+    <!-- Editable: Page Title -->
+    <title data-cms-editable="true">Quantum Studios — Clarity in Motion</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { onyx: '#0D0D0D', gold: '#C9A66B', ivory: '#FDFCF7', pearl: '#E6E6E6' },
-                    fontFamily: { serif: ['"DM Serif Display"', 'serif'], sans: ['"Inter"', 'sans-serif'], }
+                    colors: {
+                        onyx: '#0D0D0D',
+                        gold: '#C9A66B',
+                    },
+                    fontFamily: {
+                        serif: ['DM Serif Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
                 }
             }
         }
     </script>
+
     <style>
-        body { background-color: #0D0D0D; color: #FDFCF7; overflow-x: hidden; }
-        .text-gold-gradient { background: linear-gradient(to right, #C9A66B, #E3C896); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(201, 166, 107, 0.1); transition: all 0.4s ease; }
-        .glass-card:hover { border-color: #C9A66B; transform: translateY(-5px); }
+        body { background:#0D0D0D; font-family:Inter,sans-serif; }
+        .glass-card { background:rgba(255,255,255,0.03); backdrop-filter:blur(20px); border:1px solid rgba(201,166,107,0.1); transition:.4s; }
+        .glass-card:hover { transform:translateY(-8px); box-shadow:0 20px 60px rgba(201,166,107,.15); }
+        .btn-gold { background:linear-gradient(135deg,#C9A66B,#B8935A); }
+        .btn-outline { border:1px solid #C9A66B; color:#C9A66B; }
+        .glow-text { text-shadow:0 0 30px rgba(201,166,107,.3); }
     </style>
 </head>
-<body class="antialiased selection:bg-gold selection:text-onyx">
 
-    <!-- NAVIGATION -->
-    <nav class="fixed w-full z-50 bg-onyx/90 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-serif text-white tracking-wide editable">QUANTUM<span class="text-gold">.</span></a>
-            <div class="hidden md:flex space-x-8 text-sm tracking-widest uppercase text-gray-400">
-                <a href="#about" class="hover:text-gold transition-colors editable">Philosophy</a>
-                <a href="#services" class="hover:text-gold transition-colors editable">Services</a>
-                <a href="#contact" class="px-6 py-2 border border-gold/30 text-gold rounded-full hover:bg-gold hover:text-onyx transition-all editable">Start Project</a>
-            </div>
+<body class="text-white antialiased">
+
+<!-- NAV -->
+<nav class="fixed w-full top-0 z-50 bg-onyx/80 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-serif text-gold glow-text" data-cms-editable="true">
+            Quantum Studios
         </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <div class="relative z-10 text-center max-w-4xl px-6">
-            <p data-aos="fade-up" class="text-gold tracking-[0.3em] uppercase text-xs mb-6 font-medium editable">Digital Craftsmanship</p>
-            <h1 data-aos="fade-up" data-aos-delay="100" class="font-serif text-5xl md:text-7xl lg:text-8xl leading-tight mb-8 editable">
-                Command <br> <span class="text-gold-gradient italic">Attention.</span>
-            </h1>
-            <p data-aos="fade-up" data-aos-delay="200" class="text-pearl/80 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed mb-12 editable">
-                We craft digital experiences that define brands and drive results. Minimalist design, maximum impact, delivered with precision.
-            </p>
-            <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col md:flex-row gap-6 justify-center items-center">
-                <a href="#services" class="bg-gold text-onyx px-8 py-4 rounded-full font-medium tracking-wide hover:bg-white transition-all transform hover:scale-105 duration-300 editable">View Our Work</a>
-            </div>
+        <div class="hidden md:flex space-x-8">
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
-    </section>
+    </div>
+</nav>
 
-    <!-- NEW VIDEO SECTION -->
-    <section class="py-20 px-6 bg-black/50 border-y border-white/5">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="font-serif text-3xl mb-8 text-gold editable">See It In Action</h2>
-            <div class="aspect-video bg-gray-900 rounded-xl overflow-hidden glass-card border border-gold/20 shadow-2xl">
-                <!-- To change video: In CloudCannon, you edit the HTML or just replace this link in Github later. For now, it's a placeholder. -->
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/lxRwEPvL-mQ?si=dark" title="Showreel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center px-6 pt-20 text-center">
+    <div class="max-w-5xl">
+
+        <h1 class="font-serif text-6xl md:text-8xl mb-6 glow-text"
+            data-aos="fade-up"
+            data-cms-editable="true">
+            Clarity in Motion.
+        </h1>
+
+        <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto"
+           data-aos="fade-up"
+           data-aos-delay="100"
+           data-cms-editable="true">
+            Luxury digital studio creating websites that speak with clarity,
+            move with intent, and convert with ease.
+        </p>
+
+        <div class="flex gap-4 justify-center">
+            <a href="#services" class="btn-gold px-8 py-4 rounded-full font-semibold"
+               data-cms-editable="true">
+                View Packages
+            </a>
+            <a href="#contact" class="btn-outline px-8 py-4 rounded-full font-semibold"
+               data-cms-editable="true">
+                Get in Touch
+            </a>
         </div>
-    </section>
 
-    <!-- PHILOSOPHY / ABOUT -->
-    <section id="about" class="py-24 md:py-32 px-6 bg-onyx relative">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div data-aos="fade-right">
-                <h2 class="font-serif text-4xl md:text-5xl mb-8 editable">Clarity is <br><span class="text-gold">Power.</span></h2>
-                <div class="h-1 w-20 bg-gold mb-8"></div>
-                <p class="text-pearl/70 text-lg leading-relaxed mb-6 editable">
-                    In a digital landscape filled with noise, the brands that win are the ones that speak clearly.
-                </p>
-            </div>
-            <div data-aos="fade-left" class="relative">
-                <div class="aspect-[4/5] bg-neutral-900 rounded-lg overflow-hidden glass-card">
-                    <!-- EDITABLE IMAGE: Click to Swap in CloudCannon -->
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-700 editable">
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+
+        <h2 class="font-serif text-6xl text-gold text-center mb-16 glow-text"
+            data-cms-editable="true">
+            Our Services
+        </h2>
+
+        <!-- Repeatable Service Cards -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+             data-cms-repeat="services">
+
+            <div class="glass-card p-8 rounded-2xl">
+                <h3 class="font-serif text-3xl text-gold mb-2"
+                    data-cms-editable="true">
+                    Landing Page
+                </h3>
+
+                <div class="text-4xl font-bold mb-4"
+                     data-cms-editable="true">
+                    150–250 QAR
                 </div>
+
+                <ul class="space-y-2 text-gray-300"
+                    data-cms-editable="true">
+                    <li>Compelling headline & CTA</li>
+                    <li>Mobile-first design</li>
+                    <li>1 revision included</li>
+                </ul>
             </div>
+
         </div>
-    </section>
 
-    <!-- NEW IMAGE GALLERY -->
-    <section class="py-24 px-6">
-        <div class="max-w-7xl mx-auto">
-             <div class="text-center mb-12">
-                <span class="text-gold uppercase tracking-widest text-xs editable">PORTFOLIO</span>
-                <h2 class="font-serif text-4xl mt-4 editable">Recent Works</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Image 1 -->
-                <div class="h-80 bg-gray-900 rounded-lg overflow-hidden glass-card cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1481487484168-9b995ecc168d?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700 editable" alt="Work 1">
-                </div>
-                <!-- Image 2 -->
-                <div class="h-80 bg-gray-900 rounded-lg overflow-hidden glass-card cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700 editable" alt="Work 2">
-                </div>
-                <!-- Image 3 -->
-                <div class="h-80 bg-gray-900 rounded-lg overflow-hidden glass-card cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700 editable" alt="Work 3">
-                </div>
-            </div>
-        </div>
-    </section>
+        <p class="text-gray-500 text-sm italic text-center mt-12"
+           data-cms-editable="true">
+            Client pays for hosting and domain. Prices may vary based on scope.
+        </p>
 
-    <!-- SERVICES -->
-    <section id="services" class="py-24 px-6 relative bg-white/5">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <span class="text-gold uppercase tracking-widest text-xs editable">OUR EXPERTISE</span>
-                <h2 class="font-serif text-4xl md:text-5xl mt-4 editable">Precision-Crafted Solutions.</h2>
-            </div>
+    </div>
+</section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- CARD 1 -->
-                <div data-aos="fade-up" class="glass-card p-8 rounded-xl relative group">
-                    <h3 class="font-serif text-2xl mb-2 text-white group-hover:text-gold transition-colors editable">Landing Page</h3>
-                    <p class="text-3xl font-light text-gold mb-6 editable">150–250 QAR</p>
-                    <p class="text-pearl/60 text-sm mb-8 h-20 editable">A singular page designed with one purpose: to convert interest into action. Streamlined, focused, and effective.</p>
-                    <a href="#contact" class="block w-full py-3 text-center border border-white/10 rounded-lg hover:border-gold hover:text-gold transition-all text-sm uppercase tracking-widest">Select</a>
-                </div>
+<!-- ABOUT -->
+<section id="about" class="py-24 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
 
-                <!-- CARD 2 -->
-                <div data-aos="fade-up" data-aos-delay="100" class="glass-card p-8 rounded-xl relative group border-gold/30 bg-white/5">
-                    <div class="absolute top-0 right-0 bg-gold text-onyx text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg uppercase">Popular</div>
-                    <h3 class="font-serif text-2xl mb-2 text-white group-hover:text-gold transition-colors editable">Website</h3>
-                    <p class="text-3xl font-light text-gold mb-6 editable">300–450 QAR</p>
-                    <p class="text-pearl/60 text-sm mb-8 h-20 editable">The cornerstone of your online presence. We build responsive, multi-page platforms that establish authority and build immediate trust.</p>
-                    <a href="#contact" class="block w-full py-3 text-center bg-gold text-onyx rounded-lg hover:bg-white transition-all text-sm uppercase tracking-widest font-bold">Select</a>
-                </div>
+        <h2 class="font-serif text-6xl text-gold mb-8 glow-text"
+            data-cms-editable="true">
+            The Philosophy
+        </h2>
 
-                <!-- CARD 3 -->
-                <div data-aos="fade-up" data-aos-delay="200" class="glass-card p-8 rounded-xl relative group">
-                    <h3 class="font-serif text-2xl mb-2 text-white group-hover:text-gold transition-colors editable">Personal Branding</h3>
-                    <p class="text-3xl font-light text-gold mb-6 editable">200–300 QAR</p>
-                    <p class="text-pearl/60 text-sm mb-8 h-20 editable">Visual identity is reputation. We curate a cohesive aesthetic that ensures you are recognized and respected in your industry.</p>
-                    <a href="#contact" class="block w-full py-3 text-center border border-white/10 rounded-lg hover:border-gold hover:text-gold transition-all text-sm uppercase tracking-widest">Select</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        <p class="text-xl text-gray-300 mb-6"
+           data-cms-editable="true">
+            Luxury does not require complexity. We focus on speed,
+            clarity, and intentional design.
+        </p>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-24 px-6 bg-gradient-to-b from-onyx to-black border-t border-white/5">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="font-serif text-4xl md:text-5xl mb-6 editable" data-aos="fade-up">Define Your Future.</h2>
-            <p class="text-pearl/70 mb-12 editable" data-aos="fade-up" data-aos-delay="100">Your vision deserves expert execution. Tell us about your goals, and let us engineer the solution.</p>
+        <p class="text-lg text-gray-400"
+           data-cms-editable="true">
+            Every pixel has purpose. Every project is built to convert.
+        </p>
 
-            <form class="cloudcannon-form glass-card p-8 md:p-12 rounded-2xl max-w-2xl mx-auto text-left" data-aos="fade-up" data-aos-delay="200">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-gold mb-2 editable">Name</label>
-                        <input type="text" name="name" class="w-full bg-white/5 border border-white/10 rounded p-3 text-white focus:border-gold focus:outline-none transition-colors">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-gold mb-2 editable">Email</label>
-                        <input type="email" name="email" class="w-full bg-white/5 border border-white/10 rounded p-3 text-white focus:border-gold focus:outline-none transition-colors">
-                    </div>
-                </div>
-                <div class="mb-8">
-                    <label class="block text-xs uppercase tracking-widest text-gold mb-2 editable">Project Details</label>
-                    <textarea name="message" rows="4" class="w-full bg-white/5 border border-white/10 rounded p-3 text-white focus:border-gold focus:outline-none transition-colors"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-gold text-onyx font-bold py-4 rounded hover:bg-white transition-all tracking-widest uppercase editable">Submit Request</button>
-            </form>
-        </div>
-    </section>
+    </div>
+</section>
 
-    <footer class="py-12 border-t border-white/5 bg-onyx">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center opacity-60 text-sm">
-            <p class="mb-4 md:mb-0 editable">&copy; 2025 Quantum Studios. Excellence in Digital Design.</p>
-        </div>
-    </footer>
+<!-- CONTACT -->
+<section id="contact" class="py-24 px-6">
+    <div class="max-w-2xl mx-auto text-center">
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({duration: 1000, once: true, offset: 100});</script>
+        <h2 class="font-serif text-6xl text-gold mb-4 glow-text"
+            data-cms-editable="true">
+            Let's Create
+        </h2>
+
+        <p class="text-gray-400 mb-12"
+           data-cms-editable="true">
+            Tell us about your vision.
+        </p>
+
+        <form class="glass-card p-8 rounded-2xl space-y-6 cloudcannon-form">
+
+            <input type="text" placeholder="Your Name" class="w-full p-3 bg-white/5 rounded-lg">
+            <input type="email" placeholder="Email Address" class="w-full p-3 bg-white/5 rounded-lg">
+            <textarea rows="5" placeholder="Your Message" class="w-full p-3 bg-white/5 rounded-lg"></textarea>
+
+            <button class="btn-gold w-full py-4 rounded-full font-semibold">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-12 text-center border-t border-white/5">
+    <div class="font-serif text-2xl text-gold glow-text"
+         data-cms-editable="true">
+        Quantum Studios
+    </div>
+    <p class="text-gray-500 text-sm mt-2"
+       data-cms-editable="true">
+        © 2025 Quantum Studios. Clarity in Motion.
+    </p>
+</footer>
+
+<script>
+    AOS.init({ duration:1000, once:true });
+</script>
+
 </body>
 </html>
+
