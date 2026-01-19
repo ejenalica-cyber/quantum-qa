@@ -5,3 +5,7 @@ timezone: Asia/Qatar
 markdown:
   engine: commonmark
   options: {}
+collections_config:
+  pages:
+    path: ''
+    icon: wysiwyg
